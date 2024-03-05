@@ -18,6 +18,8 @@ export default class Home extends Component<Props, State> {
   }
 
   componentDidMount() {
+    const userStr = localStorage.getItem("user");
+
     UserService.getPublicContent().then(
       response => {
         this.setState({
